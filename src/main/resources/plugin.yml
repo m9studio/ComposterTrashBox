@@ -1,0 +1,8 @@
+name: ComposterTrashBox
+version: '1.0.0'
+main: ru.m9studio.ComposterTrashBox.ComposterTrashBox
+api-version: '1.20'
+author: mina987
+authors: [mina987, voldmaks]
+website: www.m9studio.ru
+description: The composer is a trash box
