@@ -5,8 +5,6 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.block.Action;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.inventory.ItemStack;
-import org.bukkit.inventory.PlayerInventory;
-
 public class PluginListener implements org.bukkit.event.Listener
 {
 	@EventHandler
@@ -15,9 +13,9 @@ public class PluginListener implements org.bukkit.event.Listener
 		ItemStack I = e.getPlayer().getInventory().getItemInMainHand();
 		if
 		(
+			e.getAction() == Action.RIGHT_CLICK_BLOCK &&
 			e.getClickedBlock().getType() == Material.COMPOSTER &&
-					e.getAction() == Action.RIGHT_CLICK_BLOCK &&
-					I.getType() != Material.AIR
+			I.getType() != Material.AIR
 		)
 		{
 			int amount = 0;
